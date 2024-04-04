@@ -4,7 +4,8 @@ let users =[
     {name : "Oumaima", date:"02/04/2024 - 13:20"},
 ]
 
-users = JSON.parse(localStorage.getItem("users"))
+usersHelp = JSON.parse(localStorage.getItem("users"))
+usersHelp == null ? users = [] : users = usersHelp
 
 function afficheUser(){
     document.getElementById("cards").innerHTML = ""
